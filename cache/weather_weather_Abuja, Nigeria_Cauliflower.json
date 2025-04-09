@@ -1,0 +1,9 @@
+{
+  "risk_level": "EXTREME",
+  "last_updated": "2025-04-02T02:26:44.990477",
+  "weather_data": {
+    "temperature": 30.314285714285713,
+    "precipitation": 1.0142857142857142,
+    "wind_speed": 3.1
+  }
+}

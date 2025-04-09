@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#chat-form").submit(function(e){
+        e.preventDefault();
+        const chatUrl = "{% url 'recommendations:chat_api' %}";
+        
+        $.ajax({
+            type: "POST",
+            url: chatUrl,
+            data: {
+                'question': $("#question").val(),
+                'csrfmiddlewaretoken': '{{ csrf_token }}'
+            },
+            success: function(response) {
+                $("#response").text(response.response);
+            }
+        });
+    });
+});
+</script>
+
+<form id="chat-form">
+    <input type="text" id="question" required>
+    <button type="submit">Ask</button>
+</form>
+<div id="response"></div>
+{% endblock %}

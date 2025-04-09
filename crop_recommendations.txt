@@ -1,0 +1,83 @@
+================================================================================
+                  🌱 PROFESSIONAL CROP RECOMMENDATION REPORT 🌱                   
+================================================================================
+
+📅 Generated on: 2025-04-08 16:28:15
+
+📍 Location: Kampala
+
+---------------------------📌 YOUR GROWING CONDITIONS----------------------------
+
+🌡️ Soil Temperature: 25.0°C
+🧪 Soil pH: 7.5
+🏜️ Soil Type: Peat
+💧 Annual Rainfall: 1200.0 mm
+💦 Humidity: 75.0%
+
+--------------------------------📊 MODEL ANALYSIS--------------------------------
+
+🔍 Model Accuracy: 70.3%
+⚙️ Best Parameters: {'classifier': GradientBoostingClassifier(random_state=42), 'classifier__learning_rate': 0.05, 'classifier__max_depth': 5, 'classifier__n_estimators': 200}
+
+                           ⭐ PRIMARY RECOMMENDATION ⭐                           
+
+1. SWEETPOTATO (Excellent Match)
+------------------------------------------------------------
+✅ Confidence: 93.1%
+
+-----------------🔬 IDEAL vs YOUR CONDITIONS-----------------
+⟡ Soil pH:    5.5-6.5 (Ideal) vs 7.5 (Yours)
+⟡ Temperature: 20°C-30°C vs 25.0°C
+⟡ Rainfall:   750-1200mm vs 1200.0mm
+⟡ Humidity:   70%-90% vs 75.0%
+
+---------------🌦️ CURRENT WEATHER CONDITIONS----------------
+🌡️ Temperature: 24.3°C
+💧 Precipitation: 0.0 mm
+☁️ Cloud Cover: 100%
+💨 Wind Speed: 7.9 km/h
+
+---------------------💲 MARKET ANALYSIS----------------------
+💰 Current Price: N/A 
+📈 Price Trend: ↓ 0.0%
+💵 Base Profit: $0/acre
+📊 Adjusted Profit: $0/acre
+
+---------------------⚠️ RISK ASSESSMENT---------------------
+🌦️ Weather Risk: LOW
+📉 Market Risk: 1.0/1.0
+☠️ Combined Risk: 1.0/1.0
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~🔀 ALTERNATIVE OPTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+2. PERSIMMON (Poor Match)
+------------------------------------------------------------
+✅ Confidence: 5.2%
+
+-------------------🔄 COMPARED TO PRIMARY--------------------
+💸 Lower profit by $0/acre
+⚡ Higher risk by 0.0 points
+
+---------------------⚡ CURRENT WEATHER----------------------
+🌡️ Temp: 24.3°C
+💧 Precip: 0.0 mm
+
+-----------------------⚡ QUICK STATS------------------------
+🌱 Ideal pH: 6.0-7.5
+🌡️ Temp Range: 15°C-25°C
+💧 Water Needs: 800-1200mm/yr
+
+===========================📝 FARMING STRATEGY ADVICE============================
+
+Consider growing SweetPotato with local guidance due to marginal conditions
+
+===========================🤖 AI AGRICULTURE ASSISTANT===========================
+
+Remember you can ask me questions anytime about:
+- Current crop prices and market trends
+- Fertilizer recommendations
+- Pest and disease control
+- Best cultivation practices
+- Any other farming questions
+
+================================================================================

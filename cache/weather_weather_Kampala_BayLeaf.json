@@ -1,0 +1,9 @@
+{
+  "risk_level": "HIGH",
+  "last_updated": "2025-04-07T23:37:29.154770",
+  "weather_data": {
+    "temperature": 22.371428571428567,
+    "precipitation": 5.171428571428571,
+    "wind_speed": 3.3
+  }
+}

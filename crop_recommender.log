@@ -1,0 +1,1146 @@
+2025-03-30 23:02:49,539 - ERROR - Failed to load data: [Errno 2] No such file or directory: 'crop.csv'
+2025-03-30 23:02:49,539 - ERROR - No data loaded for training
+2025-03-30 23:03:34,490 - INFO - C:\Users\HP\Desktop\crop_reccomder\crop_recommender\settings.py changed, reloading.
+2025-03-30 23:05:55,516 - ERROR - Failed to load data: [Errno 2] No such file or directory: 'crop.csv'
+2025-03-30 23:05:55,516 - ERROR - No data loaded for training
+2025-03-30 23:16:43,932 - INFO - Loaded data for 438 crop varieties
+2025-03-30 23:16:43,932 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-30 23:26:27,914 - INFO - C:\Users\HP\Desktop\crop_reccomder\users\models.py changed, reloading.
+2025-03-30 23:26:44,265 - INFO - Loaded data for 438 crop varieties
+2025-03-30 23:26:44,265 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-30 23:35:12,997 - WARNING - Not Found: /accounts/login/
+2025-03-30 23:35:28,202 - ERROR - Internal Server Error: /users/login/
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\users\views.py", line 17, in login_view
+    return render(request, 'registration/login.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 701, in __init__
+    filter_func = parser.find_filter(filter_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 611, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'crispy'
+2025-03-30 23:35:38,839 - WARNING - Not Found: /accounts/login/
+2025-03-30 23:35:51,314 - ERROR - Internal Server Error: /users/register/
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\users\views.py", line 29, in register_view
+    return render(request, 'registration/register.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 701, in __init__
+    filter_func = parser.find_filter(filter_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 611, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'crispy'
+2025-03-30 23:43:19,524 - INFO - C:\Users\HP\Desktop\crop_reccomder\users\urls.py changed, reloading.
+2025-03-30 23:43:25,110 - INFO - Loaded data for 438 crop varieties
+2025-03-30 23:43:25,110 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 00:03:10,961 - INFO - Loaded data for 438 crop varieties
+2025-03-31 00:03:10,978 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 00:11:35,688 - INFO - Loaded data for 438 crop varieties
+2025-03-31 00:11:35,688 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 00:16:18,011 - INFO - Loaded data for 438 crop varieties
+2025-03-31 00:16:18,011 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 00:23:57,694 - INFO - Loaded data for 438 crop varieties
+2025-03-31 00:23:57,694 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 00:30:40,558 - INFO - Loaded data for 438 crop varieties
+2025-03-31 00:30:40,564 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 00:36:11,479 - INFO - Loaded data for 438 crop varieties
+2025-03-31 00:36:11,479 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 00:45:08,341 - INFO - Loaded data for 438 crop varieties
+2025-03-31 00:45:08,341 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 00:52:02,568 - INFO - Loaded data for 438 crop varieties
+2025-03-31 00:52:02,568 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 00:58:34,906 - ERROR - Internal Server Error: /users/register/
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\users\views.py", line 29, in register_view
+    return render(request, 'registration/register.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'logout' not found. 'logout' is not a valid view function or pattern name.
+2025-03-31 00:59:25,670 - WARNING - Not Found: /accounts/login/
+2025-03-31 00:59:34,230 - ERROR - Internal Server Error: /users/login/
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\users\views.py", line 17, in login_view
+    return render(request, 'registration/login.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'logout' not found. 'logout' is not a valid view function or pattern name.
+2025-03-31 01:00:16,656 - WARNING - Not Found: /accounts/login/
+2025-03-31 01:10:49,186 - INFO - Loaded data for 438 crop varieties
+2025-03-31 01:10:49,202 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 01:34:35,778 - INFO - Loaded data for 438 crop varieties
+2025-03-31 01:34:35,781 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 01:39:12,523 - ERROR - Internal Server Error: /users/login/
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\users\views.py", line 17, in login_view
+    return render(request, 'registration/login.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 701, in __init__
+    filter_func = parser.find_filter(filter_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 611, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'crispy'
+2025-03-31 01:39:45,347 - WARNING - Not Found: /accounts/login/
+2025-03-31 01:40:02,059 - ERROR - Internal Server Error: /users/register/
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\users\views.py", line 29, in register_view
+    return render(request, 'registration/register.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 701, in __init__
+    filter_func = parser.find_filter(filter_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 611, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'crispy'
+2025-03-31 01:48:08,933 - INFO - C:\Users\HP\Desktop\crop_reccomder\crop_recommender\settings.py changed, reloading.
+2025-03-31 01:48:14,074 - INFO - Loaded data for 438 crop varieties
+2025-03-31 01:48:14,074 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 01:53:59,582 - INFO - Loaded data for 438 crop varieties
+2025-03-31 01:53:59,598 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 02:06:05,348 - INFO - Loaded data for 438 crop varieties
+2025-03-31 02:06:05,348 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 02:13:06,209 - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\recommendations\views.py", line 16, in home
+    return render(request, 'recommendations/home.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 563, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 53: 'static', expected 'endblock'. Did you forget to register or load this tag?
+2025-03-31 02:18:31,480 - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\recommendations\views.py", line 16, in home
+    return render(request, 'recommendations/home.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 519, in parse
+    self.extend_nodelist(nodelist, compiled_result, token)
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 536, in extend_nodelist
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: <ExtendsNode: extends 'recommendations/base.html'> must be the first tag in the template.
+2025-03-31 02:19:21,692 - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\recommendations\views.py", line 16, in home
+    return render(request, 'recommendations/home.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 519, in parse
+    self.extend_nodelist(nodelist, compiled_result, token)
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 536, in extend_nodelist
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: <ExtendsNode: extends 'recommendations/base.html'> must be the first tag in the template.
+2025-03-31 02:21:26,082 - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\recommendations\views.py", line 16, in home
+    return render(request, 'recommendations/home.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'home' not found. 'home' is not a valid view function or pattern name.
+2025-03-31 02:28:54,211 - WARNING - Not Found: /{% url "chat_api" %}
+2025-03-31 02:29:20,160 - ERROR - Internal Server Error: /recommend/
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\recommendations\views.py", line 65, in recommend
+    return render(request, 'recommendations/recommend.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 701, in __init__
+    filter_func = parser.find_filter(filter_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 611, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'crispy'
+2025-03-31 02:35:43,603 - ERROR - Internal Server Error: /recommend/
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\crop_reccomder\recommendations\views.py", line 54, in recommend
+    return render(request, 'recommendations/results.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'download_report' not found. 'download_report' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\recommendations\views.py", line 61, in recommend
+    return redirect('recommend')
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\crop_reccomder\works\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'recommend' not found. 'recommend' is not a valid view function or pattern name.
+2025-03-31 02:41:30,263 - INFO - C:\Users\HP\Desktop\crop_reccomder\recommendations\views.py changed, reloading.
+2025-03-31 02:45:01,695 - INFO - Loaded data for 438 crop varieties
+2025-03-31 02:45:01,703 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 03:04:01,093 - INFO - C:\Users\HP\Desktop\crop_reccomder\recommendations\views.py changed, reloading.
+2025-03-31 03:04:32,480 - INFO - Loaded data for 438 crop varieties
+2025-03-31 03:04:32,480 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 03:09:44,325 - WARNING - Not Found: /crop_recommendations.png
+2025-03-31 03:12:21,217 - WARNING - Not Found: /{% url "chat_api" %}
+2025-03-31 03:26:28,689 - INFO - C:\Users\HP\Desktop\crop_reccomder\crop_api.py changed, reloading.
+2025-03-31 03:26:54,517 - INFO - Loaded data for 438 crop varieties
+2025-03-31 03:26:54,517 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 03:32:50,280 - WARNING - Not Found: /{% url "chat_api" %}
+2025-03-31 03:33:21,777 - WARNING - Not Found: /{% url "chat_api" %}
+2025-03-31 03:35:35,824 - INFO - Loaded data for 438 crop varieties
+2025-03-31 03:35:35,830 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 03:40:18,992 - INFO - User question: where can carrots grow best?
+2025-03-31 03:40:21,460 - INFO - AI response: Carrots thrive in loose, well-drained soil rich in organic matter.  They prefer full sun (6-8 hours daily) and a slightly acidic to neutral pH (6.0-7.0).  Sandy loam soils are ideal because they allow...
+2025-03-31 13:53:24,908 - INFO - Loaded data for 438 crop varieties
+2025-03-31 13:53:24,909 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 13:58:27,655 - INFO - User question: What are the different varieties of wheat?
+2025-03-31 14:08:26,874 - ERROR - Gemini API error: Timeout of 600.0s exceeded, last exception: 503 DNS resolution failed for generativelanguage.googleapis.com:443: UNAVAILABLE: getaddrinfo: WSA Error (No such host is known.
+ -- 11001)
+2025-03-31 14:08:26,874 - INFO - AI response: I'm sorry, I couldn't process your question at this time. Please try again later....
+2025-03-31 14:10:05,429 - INFO - Loaded data for 438 crop varieties
+2025-03-31 14:10:05,437 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 14:19:32,054 - INFO - Loaded data for 438 crop varieties
+2025-03-31 14:19:32,054 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 14:24:05,999 - WARNING - Not Found: /favicon.ico
+2025-03-31 14:26:46,685 - WARNING - Not Found: /crop_recommendations.png
+2025-03-31 14:34:16,623 - INFO - Loaded data for 438 crop varieties
+2025-03-31 14:34:16,623 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 14:40:34,622 - WARNING - Not Found: /crop_recommendations.png
+2025-03-31 20:49:06,022 - INFO - Loaded data for 438 crop varieties
+2025-03-31 20:49:06,027 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 20:50:03,001 - INFO - Loaded data for 438 crop varieties
+2025-03-31 20:50:03,001 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 20:54:35,393 - WARNING - Not Found: /favicon.ico
+2025-03-31 20:55:42,575 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA137C20>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,575 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA5FFCE0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,580 - WARNING - Failed to get weather analysis: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA1574D0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,583 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6113A0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,583 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611580>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,583 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA1574D0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,583 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA3AC560>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,591 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA137C20>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,591 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA135910>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,591 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6118B0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,591 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611A00>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,597 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611BE0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,598 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612060>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,598 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6121E0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,598 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6123F0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,598 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6128A0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,598 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6129F0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,598 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612C00>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,598 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613110>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,598 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA3928A0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,598 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA135100>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,615 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA157620>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,615 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612DE0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,615 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6125D0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,615 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612900>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,615 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6124B0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,615 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612060>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,615 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6120C0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,615 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611DC0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,615 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6116A0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,615 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611460>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,631 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613290>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,631 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613470>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,631 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6139B0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,631 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613B00>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,631 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613D10>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,631 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA5FF740>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,631 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA1374D0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,631 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA15F560>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,631 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611AC0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,631 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613440>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,648 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6119D0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,648 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611FA0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,648 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611D60>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,648 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612150>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,648 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6110D0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,648 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612C60>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,648 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612F30>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,648 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613E60>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,648 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62C0E0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,648 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62C2F0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,664 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62C740>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,664 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA3AC8C0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,664 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613E00>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,664 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612C60>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,664 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612A20>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,664 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612810>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,664 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611C40>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,664 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6122D0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,664 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6118B0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,664 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613410>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,664 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6132F0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,680 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612360>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,681 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA135910>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,681 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA157CB0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,681 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA157380>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,681 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62C350>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,681 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62C9B0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,681 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62CBC0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,681 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA137C20>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,681 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6129C0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,681 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611AC0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,699 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611550>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,700 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611940>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,700 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612630>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,700 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611DC0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,700 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611D90>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,700 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612F90>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,700 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611D30>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,700 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613E90>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,700 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611B50>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,713 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA187B00>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,715 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62C5C0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,715 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62C560>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,715 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62D010>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,715 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA3C6420>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,715 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613650>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,715 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612DB0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,715 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6131D0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,715 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612DE0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,715 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612420>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,715 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611D60>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,715 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611400>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,731 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611B20>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,731 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613380>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,731 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6137A0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,731 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA136990>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,731 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA155730>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,731 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62CD40>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,731 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62C590>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,731 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62D250>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,731 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62D460>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,731 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA15F170>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,731 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611700>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,731 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611B20>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,731 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6132F0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,748 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611DF0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,748 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612420>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,748 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611E50>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,748 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612F90>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,748 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612DB0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,748 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6110D0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,748 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611E20>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,748 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA3C6420>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,748 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62D4F0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,748 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62D730>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,748 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62D940>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,748 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62DD90>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,764 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612C00>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,764 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611D00>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,764 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612C60>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,764 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611E50>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,764 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6121E0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,764 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612B70>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,764 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611AC0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,764 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611A00>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,764 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611700>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,764 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612360>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,764 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA15F170>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,764 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA154800>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,764 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62C6B0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,764 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62D7C0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,781 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62C740>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,781 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62DFD0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,781 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62E1E0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,781 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234B8D08FB0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,781 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613260>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,781 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611970>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,781 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611EB0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,781 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612210>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,781 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612420>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,781 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611910>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,781 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6127B0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,781 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612C30>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,781 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612BD0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,781 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6131D0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,797 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62D970>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,801 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62E270>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,801 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62E4B0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,801 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62E6C0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,801 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62EB10>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,801 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6126F0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,801 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612480>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,801 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6118B0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,801 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612690>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,801 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612DB0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,814 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6123F0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,816 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613F50>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,816 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612240>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,816 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611EE0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,816 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6117C0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,816 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA135910>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,816 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62E840>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,816 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62E420>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,816 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62E690>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,816 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62D640>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,816 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62ED50>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,816 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62EF60>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,830 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA15F170>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,831 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA5FE9F0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,831 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6121B0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,831 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612360>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,831 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612DE0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,831 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611EB0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,831 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6133B0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,831 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6131D0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,831 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612A50>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,831 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611910>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,831 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611730>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,831 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613F80>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,831 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612840>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,831 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613A40>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,847 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613CB0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,847 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612EA0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,847 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA3928A0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,847 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA187440>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,847 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613710>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,847 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612150>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,847 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613950>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,855 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613200>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,855 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612690>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,855 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6116A0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,855 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613EF0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,855 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612090>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,855 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612060>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,855 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612810>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,864 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612780>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,864 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613380>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,864 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6137A0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,864 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613050>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,864 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6113A0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,864 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA187B00>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,864 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA391E80>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,864 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA610F20>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,864 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612F30>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,864 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613620>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,864 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6120F0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,864 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6129C0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,864 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612990>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,864 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613AA0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,880 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611A00>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,881 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6136B0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,881 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611AF0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,883 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA613860>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,883 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA6109B0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,883 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA157CB0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,883 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA62E690>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,883 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA156150>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,883 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA15C2F0>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:42,891 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA611580>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,891 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612840>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)")': /search?q=Kampala&format=json&limit=1
+2025-03-31 20:55:42,891 - WARNING - Using fallback weather risk due to error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=Kampala&format=json&limit=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000234BA612B40>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-31 20:55:43,913 - WARNING - Not Found: /crop_recommendations.png
+2025-03-31 20:58:52,508 - INFO - Loaded data for 438 crop varieties
+2025-03-31 20:58:52,508 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 21:03:25,339 - WARNING - Not Found: /{% url "chat_api" %}
+2025-03-31 21:04:17,866 - WARNING - Not Found: /crop_recommendations.png
+2025-03-31 21:05:39,286 - WARNING - Not Found: /crop_recommendations.png
+2025-03-31 21:06:55,945 - WARNING - Not Found: /crop_recommendations.png
+2025-03-31 21:08:44,478 - WARNING - Not Found: /crop_recommendations.png
+2025-03-31 21:10:16,550 - WARNING - Not Found: /crop_recommendations.png
+2025-03-31 21:18:37,311 - INFO - Loaded data for 438 crop varieties
+2025-03-31 21:18:37,316 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-03-31 21:25:15,869 - INFO - User question: what's the trending Agricultural news?
+2025-03-31 21:35:13,420 - ERROR - Gemini API error: Timeout of 600.0s exceeded, last exception: 503 DNS resolution failed for generativelanguage.googleapis.com:443: UNAVAILABLE: getaddrinfo: WSA Error (No such host is known.
+ -- 11001)
+2025-03-31 21:35:13,420 - INFO - AI response: I'm sorry, I couldn't process your question at this time. Please try again later....
+2025-03-31 21:36:14,899 - INFO - User question: How can I grow carrots?
+2025-03-31 21:46:14,632 - ERROR - Gemini API error: Timeout of 600.0s exceeded, last exception: 503 DNS resolution failed for generativelanguage.googleapis.com:443: UNAVAILABLE: getaddrinfo: WSA Error (No such host is known.
+ -- 11001)
+2025-03-31 21:46:14,632 - INFO - AI response: I'm sorry, I couldn't process your question at this time. Please try again later....
+2025-04-01 12:56:46,715 - INFO - Loaded data for 438 crop varieties
+2025-04-01 12:56:46,731 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-04-01 13:01:17,077 - WARNING - Not Found: /favicon.ico
+2025-04-01 13:02:09,002 - WARNING - Not Found: /crop_recommendations.png
+2025-04-01 13:14:45,224 - INFO - Loaded data for 438 crop varieties
+2025-04-01 13:14:45,236 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-04-01 13:25:13,144 - INFO - Loaded data for 438 crop varieties
+2025-04-01 13:25:13,144 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-04-01 22:54:50,116 - INFO - Loaded data for 438 crop varieties
+2025-04-01 22:54:50,120 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-04-01 23:40:32,973 - WARNING - Not Found: /favicon.ico
+2025-04-01 23:41:55,699 - WARNING - Open-Meteo API request failed: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=-1.2832533&longitude=36.8172449&current=temperature_2m%2Cprecipitation%2Ccloud_cover%2Cwind_speed_10m&daily=temperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum%2Cprecipitation_hours&hourly=relative_humidity_2m&timezone=auto (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000002935019BDA0>, 'Connection to api.open-meteo.com timed out. (connect timeout=15)'))
+2025-04-01 23:49:11,697 - WARNING - Not Found: /crop_recommendations.png
+2025-04-01 23:54:34,921 - WARNING - Not Found: /{% url "chat_api" %}
+2025-04-01 23:59:32,831 - WARNING - Not Found: /crop_recommendations.png
+2025-04-02 00:05:09,592 - INFO - Loaded data for 438 crop varieties
+2025-04-02 00:05:09,592 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-04-02 00:09:50,640 - INFO - User question: Any Agric news today?
+2025-04-02 00:09:53,391 - INFO - AI response: I do not have access to real-time information, including live market data or current news feeds like "CROP_MARKET_DATA".  Therefore, I cannot provide you with today's specific agricultural news.
+
+To g...
+2025-04-02 00:13:38,616 - INFO - User question: what are the requirement for growing Flax?
+2025-04-02 00:13:42,334 - INFO - AI response: Flax cultivation requirements vary slightly depending on the intended use (fiber or seed), but generally include:
+
+**Climate:** Flax prefers a cool, temperate climate with ample sunlight.  Optimal tem...
+2025-04-02 01:10:02,543 - INFO - Loaded data for 438 crop varieties
+2025-04-02 01:10:02,543 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-04-02 01:15:03,890 - WARNING - Not Found: /{% url "chat_api" %}
+2025-04-02 01:32:08,451 - INFO - C:\Users\HP\Desktop\crop_reccomder\crop_recommender\settings.py changed, reloading.
+2025-04-02 02:04:17,947 - INFO - Loaded data for 438 crop varieties
+2025-04-02 02:04:17,947 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-04-02 02:09:27,546 - WARNING - Not Found: /{% url "chat_api" %}
+2025-04-02 02:24:39,213 - INFO - User question: how best can i grow carrots?
+2025-04-02 02:24:43,896 - INFO - AI response: Growing successful carrots requires attention to detail across several stages.  Remember to consult your local agricultural extension service for region-specific advice, as optimal practices vary base...
+2025-04-02 02:29:10,368 - WARNING - Not Found: /crop_recommendations.png
+2025-04-02 02:37:07,519 - INFO - C:\Users\HP\Desktop\crop_reccomder\recommendations\views.py changed, reloading.
+2025-04-02 02:43:44,200 - INFO - Loaded data for 438 crop varieties
+2025-04-02 02:43:44,200 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-04-02 02:48:33,279 - INFO - User question: How best can I grow apples in Uganda?
+2025-04-02 02:48:38,086 - INFO - AI response: Growing apples in Uganda presents unique challenges due to the country's tropical climate.  High altitudes (above 1500m) with cool temperatures and well-distributed rainfall are crucial.  Areas like M...
+2025-04-02 02:53:08,568 - WARNING - Not Found: /crop_recommendations.png
+2025-04-02 03:05:31,860 - INFO - User question: What crops can grow best in Uganda?
+2025-04-02 03:05:36,291 - INFO - AI response: Uganda's diverse climate allows for a wide range of crops.  High-potential crops include:
+
+**High-Value Crops (suitable for both scales):**
+
+* **Coffee:** Arabica thrives in the highlands.  Focus on q...
+2025-04-02 03:19:42,267 - WARNING - Not Found: /crop_recommendations.png
+2025-04-02 03:22:19,484 - WARNING - Not Found: /crop_recommendations.png
+2025-04-02 03:23:30,365 - WARNING - Not Found: /crop_recommendations.png
+2025-04-02 03:24:58,501 - INFO - Loaded data for 972 crop varieties
+2025-04-02 03:24:58,502 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-04-02 03:44:55,344 - WARNING - Not Found: /crop_recommendations.png
+2025-04-07 22:52:36,443 - INFO - Loaded data for 972 crop varieties
+2025-04-07 22:52:36,446 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-04-07 23:10:36,375 - INFO - Loaded data for 972 crop varieties
+2025-04-07 23:10:36,375 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-04-07 23:33:06,180 - WARNING - Not Found: /favicon.ico
+2025-04-07 23:34:13,929 - INFO - User question: hello what is the current weather in uganda
+2025-04-07 23:34:17,178 - INFO - AI response: I do not have access to real-time weather data, including current conditions in Uganda.  To get the most up-to-date weather information for a specific location in Uganda, I recommend checking a reliab...
+2025-04-07 23:37:19,499 - WARNING - Open-Meteo API request failed: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=0.3177137&longitude=32.5813539&current=temperature_2m%2Cprecipitation%2Ccloud_cover%2Cwind_speed_10m&daily=temperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum%2Cprecipitation_hours&hourly=relative_humidity_2m&timezone=auto (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000023BFF836990>, 'Connection to api.open-meteo.com timed out. (connect timeout=15)'))
+2025-04-07 23:43:19,810 - WARNING - Not Found: /crop_recommendations.png
+2025-04-07 23:51:03,401 - INFO - Loaded data for 972 crop varieties
+2025-04-07 23:51:03,402 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-04-08 00:06:22,037 - WARNING - Not Found: /crop_recommendations.png
+2025-04-08 00:08:36,515 - INFO - User question: how best can i grow sweet potato in Uganda
+2025-04-08 00:08:41,434 - INFO - AI response: Growing sweet potatoes in Uganda requires understanding its specific climate and soil conditions.  While I cannot access real-time data like CROP_MARKET_DATA, I can provide best practices.  Remember t...
+2025-04-08 14:48:01,146 - INFO - Loaded data for 972 crop varieties
+2025-04-08 14:48:01,146 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-04-08 15:30:01,074 - INFO - User question: How best can I grow cocoa best in Kampala?
+2025-04-08 15:30:07,446 - INFO - AI response: Growing cocoa successfully in Kampala requires careful consideration of its specific climate and challenges.  While Kampala's climate isn't ideally suited for cocoa (it's generally too hot and less hu...
+2025-04-08 15:58:43,511 - INFO - Loaded data for 972 crop varieties
+2025-04-08 15:58:43,514 - INFO - Using 5-fold CV (minimum class count: 6)
+2025-04-08 16:27:45,291 - WARNING - Not Found: /favicon.ico
+2025-04-08 16:28:15,896 - WARNING - Not Found: /crop_recommendations.png
+2025-04-08 16:31:39,837 - INFO - User question: how best can i grow sweet potatoes
+2025-04-08 16:31:43,954 - INFO - AI response: Growing sweet potatoes successfully involves several key steps:
+
+**1. Soil Preparation:** Sweet potatoes thrive in well-drained, sandy loam soil with a slightly acidic pH (5.5-6.5).  Amend heavy clay ...

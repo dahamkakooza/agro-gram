@@ -1,0 +1,7 @@
+Date,Crop,Price,Demand,Supply,Region
+2023-01-01,Wheat,5.50,1200,1000,North
+2023-01-08,Wheat,5.75,1250,950,North
+2023-01-15,Wheat,6.00,1300,900,North
+2023-01-01,Corn,4.20,800,850,North
+2023-01-08,Corn,4.35,850,800,North
+2023-01-15,Corn,4.50,900,750,North

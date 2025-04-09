@@ -1,0 +1,14 @@
+{
+  "crop": "Wheat",
+  "region": null,
+  "timestamp": "2025-04-08T15:39:27.929554",
+  "price": 7.74,
+  "demand": 122,
+  "supply": 44,
+  "price_trend": 1.0816510511018638,
+  "demand_trend": -5.218234381653376,
+  "supply_trend": -8.475103059883757,
+  "blockchain_verified": false,
+  "last_blockchain_update": null,
+  "supply_demand_ratio": 0.36065573770491804
+}

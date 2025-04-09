@@ -1,0 +1,10 @@
+# Environment files
+.env
+*.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Database
+*.sqlite3

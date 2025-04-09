@@ -1,0 +1,214 @@
+{% extends 'recommendations/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<style>
+    .chat-container {
+        height: 500px;
+        overflow-y: auto;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 15px;
+        margin-bottom: 20px;
+        background-color: #f9f9f9;
+    }
+    .message {
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        max-width: 80%;
+    }
+    .user-message {
+        background-color: #e3f2fd;
+        margin-left: auto;
+        border-bottom-right-radius: 0;
+    }
+    .bot-message {
+        background-color: #f1f1f1;
+        margin-right: auto;
+        border-bottom-left-radius: 0;
+    }
+    .typing-indicator {
+        display: none;
+        padding: 10px;
+        color: #666;
+        font-style: italic;
+    }
+    #questionInput:disabled {
+        background-color: #f8f9fa;
+    }
+    .chat-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    #downloadBtn {
+        display: none; /* Hidden by default */
+        transition: all 0.3s ease;
+    }
+    #downloadBtn:hover {
+        transform: translateY(-2px);
+    }
+    .spinner-border {
+        vertical-align: text-bottom;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="chat-header">
+            <h2 class="mb-0">Agriculture Assistant</h2>
+            <a href="{% url 'recommendations:download_chat' %}" 
+               class="btn btn-primary" 
+               id="downloadBtn"
+               title="Download full conversation">
+                <i class="fas fa-download mr-2"></i>
+                <span>Download Chat</span>
+                <span id="downloadSpinner" class="spinner-border spinner-border-sm d-none"></span>
+            </a>
+        </div>
+        
+        <div class="chat-container" id="chatContainer">
+            <div class="message bot-message">
+                Hello! I'm your agriculture assistant. Ask me anything about crops, fertilizers, or farming practices.
+            </div>
+            <div class="typing-indicator" id="typingIndicator">
+                Assistant is typing...
+            </div>
+        </div>
+        
+        <form id="chatForm">
+            {% csrf_token %}
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="questionInput" 
+                       placeholder="Ask a question..." required autocomplete="off">
+                <div class="input-group-append">
+                    <button class="btn btn-success" type="submit" id="submitBtn">
+                        <span id="submitText">Send</span>
+                        <span id="spinner" class="spinner-border spinner-border-sm d-none" role="status"></span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const chatForm = document.getElementById('chatForm');
+    const chatContainer = document.getElementById('chatContainer');
+    const questionInput = document.getElementById('questionInput');
+    const submitBtn = document.getElementById('submitBtn');
+    const submitText = document.getElementById('submitText');
+    const spinner = document.getElementById('spinner');
+    const typingIndicator = document.getElementById('typingIndicator');
+    const downloadBtn = document.getElementById('downloadBtn');
+    const downloadSpinner = document.getElementById('downloadSpinner');
+    
+    // Store chat messages in memory
+    let chatMessages = [{
+        text: "Hello! I'm your agriculture assistant. Ask me anything about crops, fertilizers, or farming practices.",
+        isUser: false
+    }];
+    
+    // Scroll to bottom of chat
+    function scrollToBottom() {
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+    
+    // Add message to chat
+    function addMessage(text, isUser) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
+        messageDiv.textContent = text;
+        chatContainer.insertBefore(messageDiv, typingIndicator);
+        
+        // Store message
+        chatMessages.push({ text, isUser });
+        
+        // Update download button visibility
+        updateDownloadButton();
+        scrollToBottom();
+    }
+    
+    // Update download button visibility
+    function updateDownloadButton() {
+        downloadBtn.style.display = chatMessages.length > 1 ? 'inline-flex' : 'none';
+    }
+    
+    // Handle chat form submission
+    chatForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const question = questionInput.value.trim();
+        if (!question) return;
+        
+        // Disable inputs during request
+        questionInput.disabled = true;
+        submitBtn.disabled = true;
+        submitText.textContent = 'Sending...';
+        spinner.classList.remove('d-none');
+        typingIndicator.style.display = 'block';
+        scrollToBottom();
+        
+        // Add user message
+        addMessage(question, true);
+        questionInput.value = '';
+        
+        // Send AJAX request
+        fetch("{% url 'recommendations:chat_api' %}", {
+            method: 'POST',
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+            },
+            body: new URLSearchParams({
+                'question': question
+            })
+        })
+        .then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.json();
+        })
+        .then(data => {
+            if (data.error) throw new Error(data.error);
+            typingIndicator.style.display = 'none';
+            addMessage(data.response, false);
+        })
+        .catch(error => {
+            typingIndicator.style.display = 'none';
+            addMessage(`Error: ${error.message}`, false);
+        })
+        .finally(() => {
+            // Re-enable inputs
+            questionInput.disabled = false;
+            submitBtn.disabled = false;
+            submitText.textContent = 'Send';
+            spinner.classList.add('d-none');
+            questionInput.focus();
+        });
+    });
+    
+    // Handle download button click
+    downloadBtn.addEventListener('click', function(e) {
+        if (chatMessages.length <= 1) {
+            e.preventDefault();
+            return;
+        }
+        
+        // Show loading spinner on download button
+        downloadBtn.disabled = true;
+        downloadSpinner.classList.remove('d-none');
+        downloadBtn.querySelector('span').textContent = 'Preparing...';
+    });
+    
+    // Initial focus on input
+    questionInput.focus();
+    scrollToBottom();
+});
+</script>
+{% endblock %}
