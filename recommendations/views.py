@@ -1,4 +1,8 @@
 import os
+import sys
+import json
+from pathlib import Path
+from datetime import datetime
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse, FileResponse, HttpResponseBadRequest
@@ -7,63 +11,121 @@ from django.contrib import messages
 from django.urls import reverse
 from django.core.exceptions import ValidationError
 from .forms import RecommendationForm
-from crop_api import ProfessionalCropRecommender
-from datetime import datetime
 
-# Initialize recommender with API key from settings
+# Import Agro-gram.py from the specified path
+agro_gram_path = r"C:\Users\HP\Desktop\crop_reccomder\Agro-gram.py"
+sys.path.insert(0, str(Path(agro_gram_path).parent))
+
+try:
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("agro_gram", agro_gram_path)
+    agro_gram = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(agro_gram)
+    ProfessionalCropRecommender = agro_gram.ProfessionalCropRecommender
+except Exception as e:
+    raise ImportError(f"Failed to import Agro-gram.py: {str(e)}")
+
+# Initialize recommender
 recommender = ProfessionalCropRecommender()
-recommender.load_and_merge_data()
-model_info = recommender.train_model()
+
+def get_suitability_label(confidence: float) -> str:
+    """Convert confidence score to human-readable suitability label"""
+    if confidence >= 0.9:
+        return "Excellent"
+    elif confidence >= 0.7:
+        return "Very Good"
+    elif confidence >= 0.5:
+        return "Good"
+    elif confidence >= 0.3:
+        return "Moderate"
+    elif confidence >= 0.1:
+        return "Marginal"
+    else:
+        return "Poor"
+
+def prepare_recommendation_context(suggestions, user_input, location=None):
+    """Prepare the context data for rendering recommendations"""
+    top_recommendations = []
+    for i, suggestion in enumerate(suggestions[:5]):  # Top 5 recommendations
+        market_data = recommender.CROP_MARKET_DATA.get(suggestion['Crop'], {})
+        
+        top_recommendations.append({
+            'rank': i + 1,
+            'crop': suggestion['Crop'],
+            'confidence': f"{suggestion['Confidence']:.1%}",
+            'profit': f"${market_data.get('profit_per_acre', 0):,.0f}",
+            'risk': str(suggestion.get('WeatherRisk', 'Moderate')),
+            'suitability': get_suitability_label(suggestion['Confidence'])
+        })
+    
+    return {
+        'suggestions': top_recommendations,
+        'user_input': user_input,
+        'location': location if location else 'your area'
+    }
 
 @login_required
 def home(request):
+    """Home page view"""
     return render(request, 'recommendations/home.html', {
         'title': 'Crop Recommendation System'
     })
 
 @login_required
 def recommend(request):
+    """Main recommendation view"""
     if request.method == 'POST':
         form = RecommendationForm(request.POST)
         if form.is_valid():
             try:
+                # Prepare user input
                 user_input = {
                     'soil_ph': float(form.cleaned_data['soil_ph']),
                     'soil_temp': float(form.cleaned_data['soil_temp']),
                     'soil_type': form.cleaned_data['soil_type'],
-                    'rainfall': float(form.cleaned_data['rainfall']),
+                    'rainfall': int(form.cleaned_data['rainfall']),
                     'humidity': float(form.cleaned_data['humidity'])
                 }
-                location = form.cleaned_data.get('location', '').strip()
+                location = form.cleaned_data.get('location', '').strip() or None
 
+                # Validate inputs
                 recommender.validate_inputs(**user_input)
-                suggestions = recommender.generate_suggestions(user_input, location)
+                
+                # Get recommendations
+                suggestions, weather_data = recommender.generate_suggestions(user_input, location)
                 
                 if not suggestions:
                     messages.warning(request, "No crops matched your conditions. Try adjusting your parameters.")
                     return redirect(reverse('recommendations:recommend'))
                 
-                report = recommender.generate_report(suggestions, model_info, user_input, location)
+                # Generate report
+                report = recommender.generate_report(
+                    suggestions, 
+                    {'best_score': 0.85, 'best_params': {}},  # Dummy model info
+                    user_input, 
+                    location,
+                    weather_data
+                )
+                
+                # Save outputs
                 txt_file = recommender.save_report_to_file(report)
                 html_file = recommender.save_report_as_html(report)
                 plot_path = recommender.plot_recommendations(suggestions)
 
-                if not all(os.path.exists(f) for f in [txt_file, html_file, plot_path]):
-                    raise FileNotFoundError("Could not generate all report files")
-
+                # Store file paths in session
                 request.session['report_files'] = {
                     'text': txt_file,
                     'html': html_file,
                     'plot': plot_path
                 }
 
-                context = {
+                # Prepare context
+                context = prepare_recommendation_context(suggestions, user_input, location)
+                context.update({
                     'report': report,
-                    'suggestions': suggestions,
-                    'plot_path': os.path.relpath(plot_path, os.path.join(settings.BASE_DIR, 'static')),
-                    'user_input': user_input,
-                    'location': location if location else 'your area'
-                }
+                    'plot_path': os.path.relpath(plot_path, os.path.join(settings.BASE_DIR, 'static')) if plot_path else None,
+                })
+                
                 return render(request, 'recommendations/results.html', context)
 
             except ValueError as e:
@@ -72,7 +134,7 @@ def recommend(request):
                 messages.error(request, f"Validation error: {str(e)}")
             except Exception as e:
                 messages.error(request, "An error occurred while processing your request")
-                print(f"Recommendation Error: {str(e)}")
+                print(f"Error: {str(e)}")
             return redirect(reverse('recommendations:recommend'))
     else:
         form = RecommendationForm()
@@ -84,6 +146,7 @@ def recommend(request):
 
 @login_required
 def download_report(request, file_type):
+    """Handle report downloads"""
     if file_type not in {'text', 'html', 'plot'}:
         return HttpResponseBadRequest("Invalid file type requested")
 
@@ -116,6 +179,7 @@ def download_report(request, file_type):
 
 @login_required
 def chat_api(request):
+    """Handle AI chat requests"""
     if request.method != 'POST' or not request.headers.get('X-Requested-With') == 'XMLHttpRequest':
         return JsonResponse({'error': 'Invalid request'}, status=400)
 
@@ -126,7 +190,7 @@ def chat_api(request):
     try:
         response = recommender.chat_with_assistant(question)
         
-        # Store the conversation in session if you want to maintain history
+        # Store conversation history
         chat_history = request.session.get('chat_history', [])
         chat_history.append({
             'question': question,
@@ -147,13 +211,13 @@ def chat_api(request):
 
 @login_required
 def download_chat(request):
-    """Download the entire chat history as a text file"""
+    """Download chat history"""
     chat_history = request.session.get('chat_history', [])
     if not chat_history:
         messages.warning(request, "No chat history available to download")
         return redirect(reverse('recommendations:home'))
 
-    # Format the chat history for download
+    # Format chat history
     chat_text = "AGRICULTURE ASSISTANT CHAT HISTORY\n\n"
     chat_text += f"User: {request.user.username}\n"
     chat_text += f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
@@ -164,7 +228,7 @@ def download_chat(request):
         chat_text += f"Timestamp: {entry['timestamp']}\n\n"
         chat_text += "="*50 + "\n\n"
 
-    # Create a temporary file
+    # Create temporary file
     filename = f"agriculture_chat_{request.user.username}_{datetime.now().strftime('%Y%m%d')}.txt"
     temp_file = os.path.join(settings.MEDIA_ROOT, 'temp_chats', filename)
     
@@ -172,7 +236,7 @@ def download_chat(request):
     with open(temp_file, 'w', encoding='utf-8') as f:
         f.write(chat_text)
 
-    # Serve the file for download
+    # Serve file for download
     response = FileResponse(open(temp_file, 'rb'))
     response['Content-Disposition'] = f'attachment; filename="{filename}"'
     return response

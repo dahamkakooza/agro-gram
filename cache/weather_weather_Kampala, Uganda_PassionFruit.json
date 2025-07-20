@@ -1,0 +1,9 @@
+{
+  "risk_level": "MODERATE",
+  "last_updated": "2025-07-19T12:25:28.196166",
+  "weather_data": {
+    "temperature": 21.12142857142857,
+    "precipitation": 0.5714285714285714,
+    "wind_speed": 3.3
+  }
+}

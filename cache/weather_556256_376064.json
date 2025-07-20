@@ -1,0 +1,18 @@
+{
+  "weather_info": {
+    "temperature": 23.9,
+    "feels_like": 23.3,
+    "humidity": 55,
+    "precipitation": 0.0,
+    "description": "Overcast",
+    "weathercode": 3,
+    "wind_speed": 13.0,
+    "city_name": "N/A",
+    "country": "N/A",
+    "fetch_time_utc": "2025-07-19T20:06:47.444272+00:00",
+    "temp_avg_next_7d": 23.9,
+    "precip_chance_next_7d": 0.1,
+    "extreme_weather_alert": false
+  },
+  "last_updated": "2025-07-19T20:06:47.456045+00:00"
+}

@@ -60,27 +60,21 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                {% for suggestion in suggestions|slice:":5" %}
+                                {% for suggestion in suggestions %}
                                 <tr>
                                     <td><strong>{{ suggestion.crop }}</strong></td>
-                                    <td>{{ suggestion.confidence|floatformat:2 }}%</td>
-                                    <td>${{ suggestion.adjusted_profit|floatformat:2 }}</td>
+                                    <td>{{ suggestion.confidence }}</td>
+                                    <td>{{ suggestion.profit }}</td>
                                     <td>
-                                        <span class="badge bg-{% if suggestion.combined_risk < 3 %}success{% elif suggestion.combined_risk < 7 %}warning{% else %}danger{% endif %}">
-                                            {{ suggestion.combined_risk|floatformat:2 }}
+                                        <span class="badge 
+                                            {% if suggestion.risk == 'LOW' %}bg-success
+                                            {% elif suggestion.risk == 'MODERATE' %}bg-warning
+                                            {% elif suggestion.risk == 'HIGH' %}bg-danger
+                                            {% else %}bg-secondary{% endif %}">
+                                            {{ suggestion.risk }}
                                         </span>
                                     </td>
-                                    <td>
-                                        <div class="progress" style="height: 20px;">
-                                            <div class="progress-bar bg-success" role="progressbar" 
-                                                 style="width: {{ suggestion.suitability }}%" 
-                                                 aria-valuenow="{{ suggestion.suitability }}" 
-                                                 aria-valuemin="0" 
-                                                 aria-valuemax="100">
-                                                {{ suggestion.suitability }}%
-                                            </div>
-                                        </div>
-                                    </td>
+                                    <td>{{ suggestion.suitability }}</td>
                                 </tr>
                                 {% endfor %}
                             </tbody>
@@ -96,9 +90,8 @@
 
 {% block extra_js %}
 <script>
-    // Add any JavaScript needed for the results page
     document.addEventListener('DOMContentLoaded', function() {
-        // Tooltip initialization
+        // Tooltip initialization if needed
         const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
         tooltipTriggerList.map(function (tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl)

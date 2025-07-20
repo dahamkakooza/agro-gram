@@ -1,0 +1,18 @@
+{
+  "weather_info": {
+    "temperature": 28.0,
+    "feels_like": 30.3,
+    "humidity": 61,
+    "precipitation": 0.0,
+    "description": "Partly cloudy",
+    "weathercode": 2,
+    "wind_speed": 17.0,
+    "city_name": "N/A",
+    "country": "N/A",
+    "fetch_time_utc": "2025-07-19T19:38:49.520663+00:00",
+    "temp_avg_next_7d": 28.0,
+    "precip_chance_next_7d": 0.1,
+    "extreme_weather_alert": false
+  },
+  "last_updated": "2025-07-19T19:38:49.520663+00:00"
+}

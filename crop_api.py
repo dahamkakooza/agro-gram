@@ -24,10 +24,8 @@ from enum import Enum, auto
 from tenacity import retry, stop_after_attempt, wait_exponential
 import google.generativeai as genai
 # At the top of crop_api.py (replace the Django settings import)
-import os
+import os 
 from dotenv import load_dotenv
-
-
 # Load environment variables from .env file
 load_dotenv()
 

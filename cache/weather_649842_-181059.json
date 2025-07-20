@@ -1,0 +1,18 @@
+{
+  "weather_info": {
+    "temperature": 9.4,
+    "feels_like": 7.5,
+    "humidity": 95,
+    "precipitation": 0.1,
+    "description": "Light drizzle",
+    "weathercode": 51,
+    "wind_speed": 10.4,
+    "city_name": "N/A",
+    "country": "N/A",
+    "fetch_time_utc": "2025-07-19T20:08:02.417590+00:00",
+    "temp_avg_next_7d": 9.4,
+    "precip_chance_next_7d": 0.5,
+    "extreme_weather_alert": false
+  },
+  "last_updated": "2025-07-19T20:08:02.417590+00:00"
+}
